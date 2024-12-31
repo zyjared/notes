@@ -1,0 +1,20 @@
+# node
+node_modules
+
+# vitepress
+dist
+cache
+
+# python
+__pycache__
+tempCodeRunnerFile.py
+
+# c
+*.exe
+
+# test
+test
+Test.java
+
+# 自动生成的文件
+# pages/examples/**/docs/*.md

@@ -1,0 +1,152 @@
+:root {
+  --linear-gradient-bg: #527ef5;
+  --linear-gradient: linear-gradient(135deg, #52dff5aa, #5296f5aa, #4676fbaa);
+}
+
+/*
+ * Aside
+ * ---------------------------------------- */
+
+.VPSidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background-color: var(--vp-c-divider);
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #52f0f57a, #505ef97f);
+}
+
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-text-3) transparent;
+} */
+
+.VPNavBarTitle .logo {
+  border-radius: 50%;
+}
+
+.dark .VPDocAside .outline-marker {
+  background-color: #ffffff;
+}
+
+/*
+ * border
+ * ------------------------------- */
+
+.dark .prev-next,
+.dark .group + .group,
+.dark .pager-link,
+.dark .VPMenu,
+.dark .VPNavScreenMenuLink,
+.dark .VPNavScreenMenuGroup,
+.dark .VPDocAsideOutline.has-outline .content {
+  border: 0px !important;
+  position: relative;
+}
+
+/* .vp-doc h2::before, */
+.dark .prev-next::before,
+.dark .group + .group::before,
+.dark .pager-link::before,
+.dark .pager-link::after,
+.dark .VPMenu::before,
+.dark .VPMenu::after,
+.dark .VPNavScreenMenuLink::before,
+.dark .VPNavScreenMenuGroup::before,
+.dark .VPDocAsideOutline.has-outline .content::before,
+.dark .VPFooter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: var(--linear-gradient);
+}
+
+.dark .pager-link:hover::before {
+  filter: drop-shadow(0 0 8px var(--linear-gradient-bg));
+}
+
+@media (min-width: 960px) {
+  .dark .VPNavBar:not(.home.top) .divider-line {
+    background: var(--linear-gradient);
+  }
+
+  .dark .VPNavBarTitle.has-sidebar .title {
+    border: 0px !important;
+    position: relative;
+  }
+
+  .dark .VPNavBarTitle.has-sidebar .title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--linear-gradient);
+  }
+}
+
+/* bottom */
+
+.dark .VPNavBarTitle.has-sidebar .title::before,
+.dark .VPNavScreenMenuLink::before,
+.dark .VPNavScreenMenuGroup::before {
+  top: auto;
+  bottom: 0;
+  left: 0;
+}
+
+/* left */
+
+.dark .VPDocAsideOutline.has-outline .content::before {
+  width: 1px;
+  height: 100%;
+  background: var(--linear-gradient);
+}
+
+/* border */
+.dark .VPMenu,
+.dark .pager-link {
+  z-index: 1;
+}
+
+.dark .VPMenu::before,
+.dark .VPMenu::after,
+.dark .pager-link::before,
+.dark .pager-link::after {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.dark .VPMenu::before,
+.dark .VPMenu::after {
+  border-radius: 12px;
+}
+
+.dark .VPMenu::after,
+.dark .pager-link::after {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  background-image: none;
+  background-color: var(--vp-c-bg);
+}
+
+/*
+ * VPHome
+ * --------------------------- */
+
+.dark .VPHomeHero h1.name .clip {
+  filter: drop-shadow(0 0 10px var(--linear-gradient-bg));
+}

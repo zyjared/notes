@@ -1,0 +1,24 @@
+/**
+ * @see https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+:root {
+    --vp-c-bg-soft: #f6f6f7dd;
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #52f0f5, #505ef9);
+
+    /* --vp-c-border: #52c1f5;
+    --vp-c-divider: #52c1f5;
+    --vp-c-gutter: #529ef5; */
+}
+
+.dark {
+    --vp-c-bg-soft: #202127dd;
+}
+
+:root {
+    --zy-transition-duration: 300ms;
+    --zy-transition-func: cubic-bezier(0.4, 0, 0.2, 1);
+    --zy-transition-all: 300ms all var(--zy-transition-func);
+}

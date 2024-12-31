@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@composables/*": ["src/composables/*"],
+      "@typings/*": ["src/typings/*"]
+    },
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.mts",
+    "src/**/*.ts",
+    "src/**/*.mts",
+    "src/**/*.vue",
+    "pages/**/*.mts"
+  ],
+  "exclude": []
+}
