@@ -1,0 +1,3 @@
+.dark .VPHomeHero h1.name .clip {
+  filter: drop-shadow(0 0 10px var(--linear-gradient-bg));
+}

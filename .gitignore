@@ -1,0 +1,17 @@
+# node
+node_modules
+
+# vitepress
+dist
+cache
+
+__snapshots__
+.husky/_/
+
+# python
+__pycache__
+tempCodeRunnerFile.py
+
+# c
+*.exe
+

@@ -1,0 +1,13 @@
+.VPSidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background-color: var(--vp-c-divider);
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #52f0f588, #505ef988);
+}
