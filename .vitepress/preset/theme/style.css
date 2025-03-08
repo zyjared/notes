@@ -1,0 +1,177 @@
+/**
+ * @see https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+:root {
+  --vp-c-bg-soft: #f6f6f7dd;
+  --vp-c-bg-alt: #f6f6f7aa;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #52f0f5, #505ef9);
+
+  --linear-gradient-bg: #527ef5;
+  --linear-gradient: linear-gradient(135deg, #52dff588, #5296f588, #4676fb88);
+
+  /* --vp-c-border: #52c1f5;
+    --vp-c-divider: #52c1f5;
+    --vp-c-gutter: #529ef5; */
+}
+
+.dark {
+  --vp-c-bg-soft: #202127cc;
+  --vp-c-bg-alt: #161618cc;
+}
+
+
+/*
+ * border
+ * -------------------------------- */
+.dark .prev-next,
+.dark .group+.group,
+.dark .pager-link,
+.dark .VPMenu,
+.dark .VPNavScreenMenuLink,
+.dark .VPNavScreenMenuGroup,
+.dark .VPDocAsideOutline.has-outline .content {
+  border: 0px !important;
+  position: relative;
+}
+
+/* .vp-doc h2::before, */
+.dark .prev-next::before,
+.dark .group+.group::before,
+.dark .pager-link::before,
+.dark .pager-link::after,
+.dark .VPMenu::before,
+.dark .VPMenu::after,
+.dark .VPNavScreenMenuLink::before,
+.dark .VPNavScreenMenuGroup::before,
+.dark .VPDocAsideOutline.has-outline .content::before,
+.dark .VPFooter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: var(--linear-gradient);
+}
+
+.dark .pager-link:hover::before {
+  filter: drop-shadow(0 0 8px var(--linear-gradient-bg));
+}
+
+@media (min-width: 960px) {
+  .dark .VPNavBar:not(.home.top) .divider-line {
+    background: var(--linear-gradient);
+  }
+
+  .dark .VPNavBarTitle.has-sidebar .title {
+    border: 0px !important;
+    position: relative;
+  }
+
+  .dark .VPNavBarTitle.has-sidebar .title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--linear-gradient);
+  }
+}
+
+/* bottom */
+
+.dark .VPNavBarTitle.has-sidebar .title::before,
+.dark .VPNavScreenMenuLink::before,
+.dark .VPNavScreenMenuGroup::before {
+  top: auto;
+  bottom: 0;
+  left: 0;
+}
+
+/* left */
+
+.dark .VPDocAsideOutline.has-outline .content::before {
+  width: 1px;
+  height: 100%;
+  background: var(--linear-gradient);
+}
+
+/* border */
+.dark .VPMenu,
+.dark .pager-link {
+  z-index: 1;
+}
+
+.dark .VPMenu::before,
+.dark .VPMenu::after,
+.dark .pager-link::before,
+.dark .pager-link::after {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.dark .VPMenu::before,
+.dark .VPMenu::after {
+  border-radius: 12px;
+}
+
+.dark .VPMenu::after,
+.dark .pager-link::after {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  background-image: none;
+  background-color: var(--vp-c-bg);
+}
+
+/*
+ * nav
+ * -------------------------------- */
+.VPNavBarTitle .logo {
+  border-radius: 50%;
+}
+
+.dark .VPDocAside .outline-marker {
+  background-color: #ffffff;
+}
+
+/*
+ * sidebar
+ * -------------------------------- */
+.VPSidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background-color: var(--vp-c-divider);
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #52f0f588, #505ef988);
+}
+
+/*
+ * home
+ * -------------------------------- */
+
+.dark .VPHomeHero h1.name .clip {
+  filter: drop-shadow(0 0 10px var(--linear-gradient-bg));
+}
+
+/*
+ * home
+* -------------------------------- */
+.vp-footer-separator {
+  display: inline-block;
+  margin: 0 0.5em;
+  font-weight: bold;
+}
